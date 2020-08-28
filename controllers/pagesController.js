@@ -12,3 +12,7 @@ exports.homepage = (req, res) => {
 exports.about = (req, res) => {
     res.render('pages/about-us');
 };
+
+exports.productsCreate = (req, res) => {
+    res.render('pages/createProduct');
+}

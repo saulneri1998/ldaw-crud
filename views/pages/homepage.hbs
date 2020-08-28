@@ -1,6 +1,21 @@
 <h1>Hola hbs</h1>
 <p>Esto es un parrafo</p>
 
+<form method="GET" action="/products/create">
+<p>Crear un nuevo producto</p>
+<button type="submit">Nuevo</button>
+</form>
+
+
 {{#each products}}
 <p>{{ id }} - {{ name }}</p>
+<form method="GET" action="/products/{{ id }}">
+<button type="submit">Detail</button>
+</form>
+<form method="GET" action="/products/{{ id }}/edit">
+<button type="submit">Edit</button>
+</form>
+<form method="POST" action="/products/{{ id }}?_method=DELETE">
+<button type="submit">Delete</button>
+</form>
 {{/each}}
