@@ -1,18 +1,29 @@
-<h1>Edit product</h1>
-<form method="POST" action="/products/{{ product.id }}?_method=PUT">
-    <div>
-        <label for="name">Name: </label>
-        <input type="text" id="name" name="name" value="{{ product.name }}">
+<h1 class="is-size-3">Edit product</h1>
+
+<section class="section">
+    <div class="container">
+        <form method="POST" action="/products/{{ product.id }}?_method=PUT">
+            <div class="field">
+                <label class="label" for="name">Name: </label>
+                <div class="control">
+                <input class="input" type="text" id="name" name="name" value="{{ product.name }}">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="price">Price: </label>
+                <div class="control">
+                <input class="input" type="text" id="price" name="price" value="{{ product.price }}">
+                </div>
+            </div>
+            <div class="field">
+                <label class="label" for="description">Description: </label>
+                <div class="control">
+                <input class="input" type="text" id="description" name="description" value="{{ product.description }}">
+                </div>
+            </div>
+            <div class="control">
+                <button class="button is-link" type="submit">Edit</button>
+            </div>
+        </form>
     </div>
-    <div>
-        <label for="price">Price: </label>
-        <input type="text" id="price" name="price" value="{{ product.price }}">
-    </div>
-    <div>
-        <label for="description">Description: </label>
-        <input type="text" id="description" name="description" value="{{ product.description }}">
-    </div>
-    <div>
-        <input type="submit" value="Edit">
-    </div>
-</form>
+</section>

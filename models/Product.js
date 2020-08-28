@@ -27,7 +27,6 @@ exports.find = (id) => {
 exports.edit = (id, updateProduct) => {
     return knex('products')
         .update(updateProduct)
-        .update('updated_at', knex.fn.now())
         .where('id', id);
 }
 

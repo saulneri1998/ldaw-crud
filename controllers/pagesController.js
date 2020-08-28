@@ -4,7 +4,6 @@ exports.homepage = (req, res) => {
     productsModel.all()
         .then((data) => {
             let products = data;
-            console.log(products);
             res.render('pages/homepage', { products: products });
         });
 };

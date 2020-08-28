@@ -54,7 +54,7 @@ exports.updateProduct = (req, res) => {
                     price: req.body.price,
                     description: req.body.description
                 }
-                ProductModel.update(product.id, updateProduct)
+                ProductModel.edit(product.id, updateProduct)
                     .then((id) => {
                         res.redirect('/');
                     });
